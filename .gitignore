@@ -1,0 +1,33 @@
+# Java class files
+*.class
+
+# Maven target directory
+/target/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.DS_Store
+
+# Eclipse / IntelliJ / VS Code project files
+/.classpath
+/.project
+/.settings/
+/.idea/
+/*.iml
+/.vscode/
+
+# OS-generated files
+Thumbs.db
+.DS_Store
+
+# JaCoCo coverage report
+jacoco.exec
+
+# Backup files
+*~
+
+# Build output (if generated outside target)
+bin/
+out/
