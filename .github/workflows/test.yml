@@ -20,5 +20,23 @@ jobs:
           java-version: "11"
           distribution: "temurin"
 
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.m2/repository
+          key: maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-
+
       - name: Build and run tests
         run: mvn clean test
+
+      - name: Generate JaCoCo report
+        run: mvn jacoco:prepare-agent test jacoco:report
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/index.html
