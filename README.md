@@ -1,8 +1,8 @@
-# Assignment 3
+# Assignment 4
 
-This project contains JUnit 5 tests for the `org.apache.commons.mail.Email`
-class. It verifies email functionality such as adding recipients, setting
-headers, and building MIME messages.
+This project expands on Assignment 3, where JUnit 5 tests were added to test
+the `org.apache.commons.mail.Email` class. A GitHub CI configuration is added
+to automatically run the tests when a commit is pushed.
 
 ## Requirements
 
